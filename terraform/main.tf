@@ -21,14 +21,7 @@ resource "google_storage_bucket" "data-lake-bucket" {
   location      = "US"
   force_destroy = true
 
-  lifecycle_rule {
-    condition {
-      age = 3
-    }
-    action {
-      type = "Delete"
-    }
-  }
+
 
   lifecycle_rule {
     condition {
